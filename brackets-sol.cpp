@@ -2,8 +2,13 @@
 //complexity: assume the number of elements in S is N
 //runtime complexity: O(N)
 //space complexity: O(1)
-//the main idea in resolving this with O(1) space complexity is to understand that if we "predict" a closing bracket
-//then we already had to close all instances of the same kind of bracket, and also to be sure that the previous bracket wasnt an opening of a diffrent kind of bracket
+//the main idea in resolving this with O(1) space complexity is as follow:
+//1) using counters to create a balance after passing through the string once the everything should balance out to 0
+//2) understanding how to catch structural issues without the stack. the idea here is that each iteration of the loop also "predicts"
+//which bracket should appear (I address prediction as a term before the update of the counter). it is then sufficent to understand
+//that if we "predict" a closing bracket of some kind(i.e: ) or ] or }) then it is impossible to have an even balance
+//meaning that the counter of the matching bracket shouldn't be 0 if the structre is correct. Additonally, it is impossbile for
+//the previous character to be an opening bracket of diffrent kind (witch results with miss-match type closing).
 int solution(string  S) {
     int N = S.size();
     if(N == 0) return 1;//empty string is properly nested
