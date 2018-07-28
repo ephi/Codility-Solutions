@@ -2,8 +2,8 @@
 //complexity: assume the number of elements in S is N
 //runtime complexity: O(N)
 //space complexity: O(1)
-//the main idea in resolving this with O(1) space complexity is to uderstand that if we "predict" a closing bracket
-//then we already has to close all instances of the same kind, and also to make sure the previous bracket wasnt an opening of a diffrent kind
+//the main idea in resolving this with O(1) space complexity is to understand that if we "predict" a closing bracket
+//then we already had to close all instances of the same kind of bracket, and also to be sure that the previous bracket wasnt an opening of a diffrent kind of bracket
 int solution(string  S) {
     int N = S.size();
     if(N == 0) return 1;//empty string is properly nested
