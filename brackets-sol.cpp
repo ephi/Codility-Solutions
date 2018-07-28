@@ -4,7 +4,7 @@
 //space complexity: O(1)
 //the main idea in resolving this with O(1) space complexity is as follow:
 //1) keeping track of the amount of closing and opening brackets. 
-//This is done using counters to create a balance. After passing through the string once the every counter contain 0 
+//This is done using counters to create a balance. After passing through the string once then every counter should contain 0 
 //if the amount of brackets was balanced
 //2) understanding how to catch structural issues without the stack. the idea here is that each iteration of the loop also "predicts"
 //which bracket should appear (I address prediction as a term before the update of the counter). it is then sufficent to understand
